@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+
+Pixman部署一键命令
+
+
+docker run -d --name=pixman -p 52625:5000 -e MYTVSUPER_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJib3NzX2lkIjoiMjQxNTY0NDM2IiwiZGV2aWNlX3Rva2VuIjoic3k2dnl5dnFqVGlFNUdlcUg3RloycVZSIiwiZGV2aWNlX2lkIjoiTVRVeU9XUTVORFF0TmpNeU5pMDBaVEE1TFdKaU9UWXRPRGRqTVdSbFpqWmlNamc1IiwiZGV2aWNlX3R5cGUiOiJ3ZWIiLCJkZXZpY2Vfb3MiOiJicm93c2VyIiwiZHJtX2lkIjoiTVRVeU9XUTVORFF0TmpNeU5pMDBaVEE1TFdKaU9UWXRPRGRqTVdSbFpqWmlNamc1IiwiZXh0cmEiOnsicHJvZmlsZV9pZCI6NH0sImlhdCI6MTczMzQxMDY1MSwiZXhwIjoxNzMzNDE0MjUxfQ.ebCZoikqCkLYkIvaVKwLDKBZv7iqLYslMaKgvLlTAXsVZOlT_gM8SwedMEvMDLyfA9eV4TRJQJwDtBHMDYyKzKE47F6gQ1dSRg4BJi8E42yOwzUFUluv_hUTTjtA0zxSVzpsyKTS9NgQnovFFsdOKYU12LUrsk4XLhDOOVdq0l4szVMVms4Y7wwmC8QXcDXBsXqgGEWLsuK0NyjNzUxwELyieJS4_RvNCWaxkHB8Jbbh_9-q2DU5saJTy7uZtMvBRtAQg8TpjpB7DyTdaZdE8TaI3c1VHn8Ujzq-nplL4MoUn_RvdEpjMzqOyEf0RVsVBBPIfET6D7Hr3hubnrWBY_h6OLelVXoe2ovNoIoVDTRe3-PwWVvBBBI4HAajQWtxSxvzWd-bcKKy_ujKDoutfEDx6yFvOddTVAMbJD70qSl5-wIi0ACcHpW07z1xUCQVuz35UxpzTGFAzo7zkuRT7R4cZjt9GqmPnjtKhtdL5Hu010ievS28EwaNgC1Ubb2Jd6EEmK-xSM_YCYtkGdTfIrfGTgICDJAbkLCS4vgr9k-84rZM9fJJhj5bUmZnFpJ4kpmVRhUzQSvGTcmuihKJ8uWG03QnhSH_ZYQ7sB8RIH0LJ95A21_ON1ihc-ADoH6lbRrRuVuDZx3onC0QQEUQDZlpTRnBMqpzqubl47Ta1ko  --restart=always pixman/pixman
+
+
+
+
+o11命令
+
+docker run -itd --name=o11 --restart=always -p 自定义端口:1234 wechatofficial/o11:latest
+
+
+
+
+
+
+1.打开软路由      安装o11   直接看我操作    注释:o11只支持X86系统   查看--->状态----->概览---->目标平台----	x86/64  这个就支持   也就是只支持AMD
+
+2.安装o11 执行命令     docker run -itd --name=o11 --restart=always -p 自定义端口:1234 wechatofficial/o11:latest
+   
+                         其中自定义端口  自己填写，但是一定要记住这个端口
+
+
+3.  安装完毕o11    我们访问，IP+端口   端口是你设置的自定义端口     
+
+
+4.  打开访问o11后台，  我们点击Users     添加一个用户名    然后点击ADD USER    
+
+
+
+socks5://judy:judy520@205.185.123.236:55201
+
+测试一下播放  
+
+
+
+
+
+mytv.js 是需要cloudflare work  部署（mytvsuper .m3u 这个文件是不部署完毕替换一下域名即可）  会就自己部署，  不会就放弃即可
+
+
+
+
+tvb.cfg文件是导入o11的备份文件    
+
+说明   登陆o11  设置账号密码只会 再次登陆，然后导入这个文件即可
+
+
+
+
+
+
+
+
+
