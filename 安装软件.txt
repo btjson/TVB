@@ -42,3 +42,129 @@ docker run -d --net=host --privileged=true -p 自定义端口:35455 --name allin
 
 那就执行
 docker run -d --privileged=true -p 自定义端口:35455 --name allinone-test youshandefeiyang/allinone:latest /allinone
+
+
+
+
+
+
+
+部署完毕
+
+
+http://IP+端口/tv.m3u   这个是ysptp,,,,,,,,,,,,35455这个端口改成自己自定义的端口
+
+咪咕(获取教程)
+
+
+咪咕TV,,,,,,,,,,,,35455这个端口改成自己自定义的端口
+http://你的IP:35455/migu.m3u?userid=你的userid&usertoken=你的usertoken               
+
+
+咪咕体育,,,,,,,,35455这个端口改成自己自定义的端口
+
+http://你的IP:35455/iguevent.m3u?userid=XXXXX&usertoken=XXXXXXXX                     
+
+获取Migu Token方法如下（在电脑浏览器打开 https://www.miguvideo.com/ ，登录你的账号后按F12在控制台粘贴以下代码获取，需要注意，migutv需要开通钻石VIP才能畅看直播，钻石VIP貌似可以领取，具体自己研究。）：
+
+
+
+function generateSubscriptionUrl() {
+    const getCookie = (name) => {
+        const value = '; ' + document.cookie;
+        const parts = value.split('; ' + name + '=');
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    };
+
+    const user_info = JSON.parse(decodeURIComponent(getCookie('userInfo')));
+
+    if (user_info) {
+        let url;
+        const user_id = user_info.userId;
+        const user_token = user_info.userToken;
+        if (user_id && user_token) {
+            url = `http://你的IP:35455/migu.m3u?userid=${user_id}&usertoken=${user_token}`;
+            console.log('你的订阅配置为：', url);
+            return url;
+        } else {
+            console.log('用户Cookie缺失');
+        }
+
+    } else {
+        console.log('用户Cookie找不到');
+    }
+}
+generateSubscriptionUrl();
+
+
+
+
+
+
+腾讯体育   35455这个端口改成自己自定义的端口
+
+
+http://你的IP:35455/txevent.m3u?main_login=qq&vqq_appid=XXXXXXXXXXXXX&vqq_openid=XXXXXXXXXXXXX&vqq_access_token=XXXXXXXXXXXXXXXXXXX   
+
+
+                   
+
+
+在这里借用一下pix大佬获取资料的代码  我们只需要获取上面三个参数即可   vqq_appid=              vqq_openid=        vqq_access_token=
+
+
+function generateSubscriptionUrl() {
+    const getCookie = (name) => {
+        const value = '; ' + document.cookie;
+        const parts = value.split('; ' + name + '=');
+        if (parts.length === 2) {
+            return parts.pop().split(';').shift();
+        }
+    };
+
+    const main_login = getCookie('main_login');
+
+    if (main_login) {
+        let url;
+
+        if (main_login === 'qq') {
+            const vqq_appid = getCookie('vqq_appid');
+            const vqq_openid = getCookie('vqq_openid');
+            const vqq_access_token = getCookie('vqq_access_token');
+
+            if (vqq_appid && vqq_openid && vqq_access_token) {
+                url = `https://livednow.org/tencent/list?main_login=${main_login}&vqq_appid=${vqq_appid}&vqq_openid=${vqq_openid}&vqq_access_token=${vqq_access_token}`;
+                console.log('你的订阅配置为：', url);
+                return url;
+            } else {
+                console.log('One or more QQ cookies are missing');
+            }
+
+        } else if (main_login === 'wx') {
+            const appid = getCookie('appid');
+            const openid = getCookie('openid');
+            const access_token = getCookie('access_token');
+            const vuserid = getCookie('vuserid');
+            const refresh_token = getCookie('refresh_token');
+
+            if (appid && openid && access_token && vuserid && refresh_token) {
+                url = `https://livednow.org/tencent/list?main_login=${main_login}&appid=${appid}&openid=${openid}&access_token=${access_token}&vuserid=${vuserid}&refresh_token=${refresh_token}`;
+                console.log('你的订阅配置为：', url);
+                return url;
+            } else {
+                console.log('One or more WeChat cookies are missing');
+            }
+        }
+
+    } else {
+        console.log('main_login cookie is missing');
+    }
+}
+generateSubscriptionUrl();
+
+
+
+
+
