@@ -1,0 +1,39 @@
+1. 安装软件
+# 根据你的服务器架构选择，下面以 Linux AMD64 为例
+sudo apt update
+sudo apt install ffmpeg
+
+mkdir stream
+cd stream
+wget https://github.com/nilaoda/N_m3u8DL-RE/releases/download/v0.2.1-beta/N_m3u8DL-RE_Beta_linux-x64_20240828.tar.gz
+tar -zxvf N_m3u8DL-RE_Beta_linux-x64_20240828.tar.gz
+mv N_m3u8DL-RE_Beta_linux-x64/N_m3u8DL-RE ./m3u8dl
+
+wget https://github.com/shaka-project/shaka-packager/releases/download/v3.2.0/packager-linux-x64
+
+
+
+chmod +x m3u8dl packager-linux-x64
+
+
+
+
+
+
+
+安装肥羊的旧版本   支持腾讯体育  咪咕体育
+
+
+镜像名字我写的youshandefeiyang/allinone:latest
+
+
+容器  执行一键安装
+
+
+
+docker run -d --net=host --privileged=true -p 自定义端口:35455 --name allinone-test youshandefeiyang/allinone:latest /allinone
+
+如果自己不想要host
+
+那就执行
+docker run -d --privileged=true -p 自定义端口:35455 --name allinone-test youshandefeiyang/allinone:latest /allinone
