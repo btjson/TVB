@@ -7,7 +7,7 @@
 
 镜像下载
 
-https://cowtransfer.com/s/d079c4405f334d输入传输口令 fr72p2 
+https://cowtransfer.com/s/0697ef9e82a94f   输入传输口令 1t2iu1
 
 镜像名字我写的youshandefeiyang/allinone:latest
 
@@ -43,7 +43,7 @@ http://你的IP:35455/migu.m3u?userid=你的userid&usertoken=你的usertoken
 
 咪咕体育,,,,,,,,35455这个端口改成自己自定义的端口
 
-http://你的IP:35455/iguevent.m3u?userid=XXXXX&usertoken=XXXXXXXX                     
+http://你的IP:35455/miguevent.m3u?userid=XXXXX&usertoken=XXXXXXXX                     
 
 获取Migu Token方法如下（在电脑浏览器打开 https://www.miguvideo.com/ ，登录你的账号后按F12在控制台粘贴以下代码获取，需要注意，migutv需要开通钻石VIP才能畅看直播，钻石VIP貌似可以领取，具体自己研究。）：
 
