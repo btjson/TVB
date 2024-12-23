@@ -1,0 +1,14 @@
+镜像拉取: docker pull doubebly/doube-itv:latest
+
+镜像运行: 
+docker run -d --name=doube-itv -p 50001:5000 docker.zhai.cm/doubebly/doube-itv:latest
+
+
+访问 http://ip:port/help (示例：http://127.0.0.1:50001/help)，可以看到txt和m3u的订阅链接
+
+支持的架构：linux/amd64：18.86 MB，linux/arm64： 19.38 MB，linux/arm/v7： 17.57 MB
+
+
+总共有530个有效频道，(需要国内vps或者软路由使用，禁止海外地区)
+
+🤣沐辰老板提供~！！！！！！
