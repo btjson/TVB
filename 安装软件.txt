@@ -7,7 +7,7 @@
 
 镜像下载
 
-https://cowtransfer.com/s/0697ef9e82a94f   输入传输口令 1t2iu1
+https://drive.google.com/drive/folders/1NigILp6YvRNXy68U2n5ePHjRSA-HR6KY?usp=sharing
 
 镜像名字我写的youshandefeiyang/allinone:latest
 
