@@ -1,0 +1,33 @@
+白嫖dns 流媒体解锁地址
+
+https://app.alice.ws
+
+https://akile.io
+
+
+
+
+
+
+测试流媒体解锁命令
+
+bash <(curl -L -s check.unlock.media)
+
+
+首次执行mack-a 八合一脚本
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+
+选择2      在选择1  一直往下操作
+
+再次执行
+选择11  在选择5  然后添加dns   也就是你白嫖的dns  或者你收费的dns
+
+
+
+然后输入下方的
+
+api2.4gtv.tv,4gtv,4gtvfree-cds.cdn.hinet.net,ntd-tgc.cdn.hinet.net,cdn.hinet.net,akamaized,netflix,bahamut,hulu,hbo,disney,bbc,4chan,fox,abema,dmm,niconico,pixiv,bilibili,viu
+
+
+
+
